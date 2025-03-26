@@ -1,0 +1,72 @@
+Review1:
+    public bool IsShopOpen(string day)
+    {
+        var isShopOpen = false;
+        if (string.IsNullOrEmpty(day))
+        {
+            return isShopOpen    
+        }
+
+        if (day.Equals("friday", StringComparision.OrdinalIgnoreCase) || 
+            day.Equals("saturday", StringComparision.OrdinalIgnoreCase) || 
+            day.Equals("sunday", StringComparision.OrdinalIgnoreCase))
+        {
+            isShopOpen = true;
+        }
+        
+        return isShopOpen;
+    }
+
+Review3:
+    private const string MAX_LIMIT = 49;
+    public long Fibonacci(int n)
+    {
+        if (n > MAX_LIMIT)
+        {
+            throw new System.Exception("Not supported");
+        }
+
+        if (n == 0 || n == 1)
+        {
+            return n;
+        }
+
+        return Fibonacci(n-1) + Fibonacci(n-2);
+    }
+
+Review4:
+    var listOfCities = new[] { ... }
+    foreach(var city in listOfCities)
+    {
+        DoStuff();
+        DoSomeOtherStuff();
+
+        Dispatch(city);
+    }
+
+Review5:
+    private const int ADMIN_ROLE = 8;
+    if (userRole == ADMIN_ROLE)
+    {
+        ...
+    }
+
+Review6:
+    public class Car
+    {
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public string Color { get; set; }
+    }   
+
+Review9:
+    private const string DEFAULT_BREWERY_NAME = "Hipster Brew Co.";
+    public void CreateMicrobrewery(string name = null)
+    {
+        if (string.IsNullOrEmpty(name))
+        {
+            name = DEFAULT_BREWERY_NAME;
+        }
+
+        // reuse name instead of breweryName;.
+    }
