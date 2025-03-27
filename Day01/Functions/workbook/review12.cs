@@ -1,0 +1,4 @@
+if (article.state == "published")
+{
+    // ...
+}
